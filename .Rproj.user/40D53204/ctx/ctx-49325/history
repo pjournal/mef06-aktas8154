@@ -1,0 +1,10 @@
+libarary(tidyverse)
+library(tidyverse)
+library(palmerpenguins)
+penguins<-data("penguins")
+head(penguins)
+head(penguins_raw)
+ggplot2::aes(data=penguins_raw,x="Species",y=count(penguins_raw$Species))
+In
+knitr::opts_chunk$set(echo = TRUE)
+bslib::bootswatch_themes()

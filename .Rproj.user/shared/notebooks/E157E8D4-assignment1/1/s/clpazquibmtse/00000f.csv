@@ -1,0 +1,48 @@
+"0","install.packages('quantmod')"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/quantmod_0.4.20.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1032188 bytes (1007 KB)
+"
+"2","downloaded 1007 KB
+
+"
+"1","package ‘quantmod’ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\sdemirdal\AppData\Local\Temp\RtmpO2uMXz\downloaded_packages"
+"1",""
+"1","
+"
+"0","library('quantmod')"
+"2","Zorunlu paket yükleniyor: xts
+"
+"2","Zorunlu paket yükleniyor: zoo
+"
+"2","
+Attaching package: ‘zoo’
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+"
+"2","Zorunlu paket yükleniyor: TTR
+"
+"2","Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+"
+"0","getSymbols(Symbols = 'USD/EUR', src = 'oanda')"
+"1","[1]"
+"1"," ""USD/EUR"""
+"1","
+"

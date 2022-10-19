@@ -1,0 +1,8 @@
+bslib::bootswatch_themes()
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("devtools")
+library(devtools)
+install_github("wenxi77/PartialKmeans")
+install.packages("devtools")
+library(devtools)
+install_github("wenxi77/PartialKmeans")

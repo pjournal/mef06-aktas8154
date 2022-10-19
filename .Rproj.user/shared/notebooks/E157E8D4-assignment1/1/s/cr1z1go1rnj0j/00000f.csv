@@ -1,0 +1,6 @@
+"0","library('quantmod')"
+"0","getSymbols(Symbols = 'USD/EUR', src = 'oanda')"
+"1","[1]"
+"1"," ""USD/EUR"""
+"1","
+"
