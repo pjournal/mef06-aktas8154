@@ -1,0 +1,104 @@
+---
+title: " Sabri Demirdal Assignment 1"
+author: "Sabri Demirdal"
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# ABOUT MYSELF
+
+Firstly, I'm Sabri and I graduated from Bogazici university department of economics in 2020. After the graduation, I started to work in the investment office of the Presidency of Republic of Turkey and I have been working here for almost two years as an Analyst.Even if I am dealing with some data process like FDI report and some sector analysis in Turkey in my job, I want to go deeper into data science and work in the more sophisticated and technical job that related to in that area.Therefore I started to Big Data Analytics master program at MEF university.In this sense, despite the fact that until the university I had no idea and any information about this area but some courses that I took in the university and some online bootcamps in the coursera and udemy like platforms bring my knowledge to some level, so with this master program I hope to achive enough proficiency to start a good job in this field.
+
+You access my Linkedin account by clicking [here](https://www.linkedin.com/in/sabri-demirdal-0508a1169/),
+
+and my **E-mail** [sdemirdal\@invest.gov.tr](mailto:sdemirdal@invest.gov.tr)
+
+# MY FAVORITE UseR-2022 VİDEO
+
+## Wenxi Zhang - k-means clustering usage in datasets with missing values
+
+This content from Wenzi Zhang who graduated from Columbia University. She aim to utilize a modified K-means algorithm to handle data with missing values.
+
+K-means clustering is a very popular type of unsupervised learning and it is a clustering method that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest cluster centroid and used commonly in machine learning models.
+
+![K means Clustering](https://static.javatpoint.com/tutorial/machine-learning/images/k-means-clustering-algorithm-in-machine-learning.png)
+
+However, the standard K-means algorithm fails to accomodate data with missing values. This modified k-means algorithm below takes missing values into account. When calculating the sum squared error of each data point to the centroid, we only consider the partial distance with entries with non-NA values. This innovation in the algorithm could be beneficial for large sparse datasets with missing values, especially for datasets of recommendation systems.
+
+![Visualize the influence of the number of missing values for each observation by drawing density plots of the distance between the centroid and each observation. All distances are categorized by the number of NAs in each observation.](housevotes_density.png)\
+
+# 3 R POSTS RELEVANT MY İNTEREST
+
+## Downloading Data Using Quantmod Package in R
+
+Quantmod provides a very powerful function for downloading financial data from the web. This function is called getSymbols. The getSymbols() method sends a request to download and manage data from public sources or local data. It is necessary to pass some parameters within this method to make the desired request. The first argument of this function is a character vector specifying the names of the symbols to be downloaded. Then you can specify the source from which you want to get the data.
+
+The quantmod package is capable of downloading data from a variety of sources. The current supported sources are: yahoo, google, MySQL, FRED, csv, RData, and oanda. For example, FRED (Federal Reserve Economic Data), is a database of 20,070 U.S. economic time series (![see](http://research.stlouisfed.org/fred2/)).
+
+**Example: USD/EUR exchange rates from Oanda**
+
+```{r}
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+```
+
+Here we have loaded the data for USD/EUR from the Oanda API which provides free currency data. The getSymbols() method doesn't return any output. Instead, it creates an internal object in the Global Environment which in this case is the USDEUR object. The data object is an "extensible time series" (xts) object.
+
+```{r}
+head(USDEUR,15)
+```
+
+To see the starting point of the data, type the following command. It fetches and displays the first 15 rows of the data.
+
+[Here](https://financetrain.com/downloading-data-using-quantmod-package-in-r) is the full post.
+
+## The Power of mutate( ) for Data Wrangling in R
+
+mutate() is a dplyr function that adds new variables and preserves existing ones. That's what the documentation says. So when you want to add new variables or change one already in the dataset, that's your good ally. Given our dataset df , we can easily add columns with calculations.
+
+```{r}
+df <- data.frame(col1=c(1,2,3,4,5,7,6,8,9,7),
+                 col2=c(2,3,4,5,6,5,5,4,6,3),
+                 col3=c(5,7,8,9,9,3,5,3,8,9),
+                 col4=c(43,54,6,3,8,5,6,4,4,3))
+df
+```
+
+```{r}
+library("dplyr")
+# Add mean, std and median of columns
+mutate(df, mean_col1 = mean(col1),
+       std_col2 = sd(col2), 
+       median_col3 = median(col3))
+```
+
+[Here](https://towardsdatascience.com/the-power-of-mutate-for-data-wrangling-in-r-172dd2b0be73) is the link of post.
+
+## A simple introduction to ggplot2 (for plotting your data!)
+
+Data visualization is a powerful tool for scientists and their audiences to easily grasp relationships and trends in data. Some of you may already know how to generate plots using base R. In this blog post, we're going to introduce a package called "ggplot2" that makes it more intuitive to create consistently nice-looking figures in R.The "gg" part of "ggplot2" stands for the grammar of graphics. Just like sentences are composed of various parts of speech (e.g., nouns, verbs, adjectives) that are arranged using a grammatical structure, ggplot2 allows us to create figures using a standardized syntax.
+
+**Let's load up a data set that comes built into R, called ChickWeight**
+
+```{r}
+data(ChickWeight)
+head(ChickWeight)
+```
+
+Once you figure out how you want to map your data to aesthetic elements, then you present your data using a geometric object, like a scatterplot, boxplot, lineplot, etc.
+
+![Concept of ggplot](https://i1.wp.com/www.rforecology.com/ggplot2_image3.png?w=578&ssl=1)
+
+**AN EXAMPLE**
+```{r}
+library("ggplot2")
+ggplot(ChickWeight, aes(x = Time, y = weight)) +
+geom_point(aes(color = Diet))
+```
+[Here](https://www.datanovia.com/en/blog/how-to-install-ggplot2-in-r/) is the full link.
+
+
+
