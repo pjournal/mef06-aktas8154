@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "assignment1.html",
-    "href": "assignment1.html",
-    "title": "1  Sabri Demirdal Assignment 1",
-    "section": "",
-    "text": "Firstly, I’m Sabri and I graduated from Bogazici university department of economics in 2020. After the graduation, I started to work in the investment office of the Presidency of Republic of Turkey and I have been working here for almost two years as an Analyst.Even if I am dealing with some data process like FDI report and some sector analysis in Turkey in my job, I want to go deeper into data science and work in the more sophisticated and technical job that related to in that area.Therefore I started to Big Data Analytics master program at MEF university.In this sense, despite the fact that until the university I had no idea and any information about this area but some courses that I took in the university and some online bootcamps in the coursera and udemy like platforms bring my knowledge to some level, so with this master program I hope to achive enough proficiency to start a good job in this field.\nYou access my Linkedin account by clicking here,\nand my E-mail sdemirdal@invest.gov.tr"
-  },
-  {
-    "objectID": "assignment1.html#wenxi-zhang---k-means-clustering-usage-in-datasets-with-missing-values",
-    "href": "assignment1.html#wenxi-zhang---k-means-clustering-usage-in-datasets-with-missing-values",
-    "title": "1  Sabri Demirdal Assignment 1",
-    "section": "3.1 Wenxi Zhang - k-means clustering usage in datasets with missing values",
-    "text": "3.1 Wenxi Zhang - k-means clustering usage in datasets with missing values\nThis content from Wenzi Zhang who graduated from Columbia University. She aim to utilize a modified K-means algorithm to handle data with missing values.\nK-means clustering is a very popular type of unsupervised learning and it is a clustering method that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest cluster centroid and used commonly in machine learning models.\n\n\n\nK means Clustering\n\n\nHowever, the standard K-means algorithm fails to accomodate data with missing values. This modified k-means algorithm below takes missing values into account. When calculating the sum squared error of each data point to the centroid, we only consider the partial distance with entries with non-NA values. This innovation in the algorithm could be beneficial for large sparse datasets with missing values, especially for datasets of recommendation systems."
-  },
-  {
-    "objectID": "assignment1.html#downloading-data-using-quantmod-package-in-r",
-    "href": "assignment1.html#downloading-data-using-quantmod-package-in-r",
-    "title": "1  Sabri Demirdal Assignment 1",
-    "section": "4.1 Downloading Data Using Quantmod Package in R",
-    "text": "4.1 Downloading Data Using Quantmod Package in R\nQuantmod provides a very powerful function for downloading financial data from the web. This function is called getSymbols. The getSymbols() method sends a request to download and manage data from public sources or local data. It is necessary to pass some parameters within this method to make the desired request. The first argument of this function is a character vector specifying the names of the symbols to be downloaded. Then you can specify the source from which you want to get the data.\nThe quantmod package is capable of downloading data from a variety of sources. The current supported sources are: yahoo, google, MySQL, FRED, csv, RData, and oanda. For example, FRED (Federal Reserve Economic Data), is a database of 20,070 U.S. economic time series ().\nExample: USD/EUR exchange rates from Oanda\n\nlibrary('quantmod')\n\nZorunlu paket yükleniyor: xts\n\n\nZorunlu paket yükleniyor: zoo\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\nZorunlu paket yükleniyor: TTR\n\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\ngetSymbols(Symbols = 'USD/EUR', src = 'oanda')\n\n[1] \"USD/EUR\"\n\n\nHere we have loaded the data for USD/EUR from the Oanda API which provides free currency data. The getSymbols() method doesn’t return any output. Instead, it creates an internal object in the Global Environment which in this case is the USDEUR object. The data object is an “extensible time series” (xts) object.\n\nhead(USDEUR,15)\n\n            USD.EUR\n2022-04-23 0.926153\n2022-04-24 0.926068\n2022-04-25 0.931160\n2022-04-26 0.936182\n2022-04-27 0.944162\n2022-04-28 0.951054\n2022-04-29 0.948492\n2022-04-30 0.948290\n2022-05-01 0.948296\n2022-05-02 0.950676\n2022-05-03 0.950338\n2022-05-04 0.948008\n2022-05-05 0.946067\n2022-05-06 0.947847\n2022-05-07 0.948250\n\n\nTo see the starting point of the data, type the following command. It fetches and displays the first 15 rows of the data.\nHere is the full post."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SABRİ DEMİRDAL Progress Journal",
@@ -28,10 +7,6 @@
     "text": "This progress journal covers [STUDENT NAME SURNAME / PROJECT GROUP NAME]’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
   },
   {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     "objectID": "assignment1.html",
     "href": "assignment1.html",
     "title": "1  Sabri Demirdal Assignment 1",
@@ -50,14 +25,9 @@
     "href": "assignment1.html#downloading-data-using-quantmod-package-in-r",
     "title": "1  Sabri Demirdal Assignment 1",
     "section": "4.1 Downloading Data Using Quantmod Package in R",
-    "text": "4.1 Downloading Data Using Quantmod Package in R\nQuantmod provides a very powerful function for downloading financial data from the web. This function is called getSymbols. The getSymbols() method sends a request to download and manage data from public sources or local data. It is necessary to pass some parameters within this method to make the desired request. The first argument of this function is a character vector specifying the names of the symbols to be downloaded. Then you can specify the source from which you want to get the data.\nThe quantmod package is capable of downloading data from a variety of sources. The current supported sources are: yahoo, google, MySQL, FRED, csv, RData, and oanda. For example, FRED (Federal Reserve Economic Data), is a database of 20,070 U.S. economic time series ().\nExample: USD/EUR exchange rates from Oanda\n\nlibrary('quantmod')\n\nZorunlu paket yükleniyor: xts\n\n\nZorunlu paket yükleniyor: zoo\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\nZorunlu paket yükleniyor: TTR\n\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\ngetSymbols(Symbols = 'USD/EUR', src = 'oanda')\n\n[1] \"USD/EUR\"\n\n\nHere we have loaded the data for USD/EUR from the Oanda API which provides free currency data. The getSymbols() method doesn’t return any output. Instead, it creates an internal object in the Global Environment which in this case is the USDEUR object. The data object is an “extensible time series” (xts) object.\n\nhead(USDEUR,15)\n\n            USD.EUR\n2022-04-23 0.926153\n2022-04-24 0.926068\n2022-04-25 0.931160\n2022-04-26 0.936182\n2022-04-27 0.944162\n2022-04-28 0.951054\n2022-04-29 0.948492\n2022-04-30 0.948290\n2022-05-01 0.948296\n2022-05-02 0.950676\n2022-05-03 0.950338\n2022-05-04 0.948008\n2022-05-05 0.946067\n2022-05-06 0.947847\n2022-05-07 0.948250\n\n\nTo see the starting point of the data, type the following command. It fetches and displays the first 15 rows of the data.\nHere is the full post."
+    "text": "4.1 Downloading Data Using Quantmod Package in R\nQuantmod provides a very powerful function for downloading financial data from the web. This function is called getSymbols. The getSymbols() method sends a request to download and manage data from public sources or local data. It is necessary to pass some parameters within this method to make the desired request. The first argument of this function is a character vector specifying the names of the symbols to be downloaded. Then you can specify the source from which you want to get the data.\nThe quantmod package is capable of downloading data from a variety of sources. The current supported sources are: yahoo, google, MySQL, FRED, csv, RData, and oanda. For example, FRED (Federal Reserve Economic Data), is a database of 20,070 U.S. economic time series ().\nExample: USD/EUR exchange rates from Oanda\n\nlibrary('quantmod')\n\nZorunlu paket yükleniyor: xts\n\n\nZorunlu paket yükleniyor: zoo\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\nZorunlu paket yükleniyor: TTR\n\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\ngetSymbols(Symbols = 'USD/EUR', src = 'oanda')\n\n[1] \"USD/EUR\"\n\n\nHere we have loaded the data for USD/EUR from the Oanda API which provides free currency data. The getSymbols() method doesn’t return any output. Instead, it creates an internal object in the Global Environment which in this case is the USDEUR object. The data object is an “extensible time series” (xts) object.\n\nhead(USDEUR,15)\n\n            USD.EUR\n2022-04-28 0.951054\n2022-04-29 0.948492\n2022-04-30 0.948290\n2022-05-01 0.948296\n2022-05-02 0.950676\n2022-05-03 0.950338\n2022-05-04 0.948008\n2022-05-05 0.946067\n2022-05-06 0.947847\n2022-05-07 0.948250\n2022-05-08 0.948332\n2022-05-09 0.949019\n2022-05-10 0.947740\n2022-05-11 0.948977\n2022-05-12 0.958168\n\n\nTo see the starting point of the data, type the following command. It fetches and displays the first 15 rows of the data.\nHere is the full post."
   },
   {
-=======
->>>>>>> 7f78996dbe553536b59578501518cf984092ad3c
-=======
->>>>>>> 7f78996dbe553536b59578501518cf984092ad3c
->>>>>>> Stashed changes
     "objectID": "assignment1.html#the-power-of-mutate-for-data-wrangling-in-r",
     "href": "assignment1.html#the-power-of-mutate-for-data-wrangling-in-r",
     "title": "1  Sabri Demirdal Assignment 1",
@@ -65,32 +35,38 @@
     "text": "4.2 The Power of mutate( ) for Data Wrangling in R\nmutate() is a dplyr function that adds new variables and preserves existing ones. That’s what the documentation says. So when you want to add new variables or change one already in the dataset, that’s your good ally. Given our dataset df , we can easily add columns with calculations.\n\ndf <- data.frame(col1=c(1,2,3,4,5,7,6,8,9,7),\n                 col2=c(2,3,4,5,6,5,5,4,6,3),\n                 col3=c(5,7,8,9,9,3,5,3,8,9),\n                 col4=c(43,54,6,3,8,5,6,4,4,3))\ndf\n\n   col1 col2 col3 col4\n1     1    2    5   43\n2     2    3    7   54\n3     3    4    8    6\n4     4    5    9    3\n5     5    6    9    8\n6     7    5    3    5\n7     6    5    5    6\n8     8    4    3    4\n9     9    6    8    4\n10    7    3    9    3\n\n\n\nlibrary(\"dplyr\")\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:xts':\n\n    first, last\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n# Add mean, std and median of columns\nmutate(df, mean_col1 = mean(col1),\n       std_col2 = sd(col2), \n       median_col3 = median(col3))\n\n   col1 col2 col3 col4 mean_col1 std_col2 median_col3\n1     1    2    5   43       5.2 1.337494         7.5\n2     2    3    7   54       5.2 1.337494         7.5\n3     3    4    8    6       5.2 1.337494         7.5\n4     4    5    9    3       5.2 1.337494         7.5\n5     5    6    9    8       5.2 1.337494         7.5\n6     7    5    3    5       5.2 1.337494         7.5\n7     6    5    5    6       5.2 1.337494         7.5\n8     8    4    3    4       5.2 1.337494         7.5\n9     9    6    8    4       5.2 1.337494         7.5\n10    7    3    9    3       5.2 1.337494         7.5\n\n\nHere is the link of post."
   },
   {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7f78996dbe553536b59578501518cf984092ad3c
->>>>>>> Stashed changes
-    "objectID": "assignment1.html#section",
-    "href": "assignment1.html#section",
-    "title": "1  Sabri Demirdal Assignment 1",
-    "section": "4.3 ",
-    "text": "4.3"
-  },
-  {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> 7f78996dbe553536b59578501518cf984092ad3c
-=======
->>>>>>> 7f78996dbe553536b59578501518cf984092ad3c
->>>>>>> Stashed changes
     "objectID": "assignment1.html#a-simple-introduction-to-ggplot2-for-plotting-your-data",
     "href": "assignment1.html#a-simple-introduction-to-ggplot2-for-plotting-your-data",
     "title": "1  Sabri Demirdal Assignment 1",
     "section": "4.3 A simple introduction to ggplot2 (for plotting your data!)",
     "text": "4.3 A simple introduction to ggplot2 (for plotting your data!)\nData visualization is a powerful tool for scientists and their audiences to easily grasp relationships and trends in data. Some of you may already know how to generate plots using base R. In this blog post, we’re going to introduce a package called “ggplot2” that makes it more intuitive to create consistently nice-looking figures in R.The “gg” part of “ggplot2” stands for the grammar of graphics. Just like sentences are composed of various parts of speech (e.g., nouns, verbs, adjectives) that are arranged using a grammatical structure, ggplot2 allows us to create figures using a standardized syntax.\nLet’s load up a data set that comes built into R, called ChickWeight\n\ndata(ChickWeight)\nhead(ChickWeight)\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\nOnce you figure out how you want to map your data to aesthetic elements, then you present your data using a geometric object, like a scatterplot, boxplot, lineplot, etc.\n\n\n\nConcept of ggplot\n\n\nAN EXAMPLE\n\nlibrary(\"ggplot2\")\nggplot(ChickWeight, aes(x = Time, y = weight)) +\ngeom_point(aes(color = Diet))\n\n\n\n\nHere is the full link."
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "2  Sabri Demirdal Assignment 2",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6      ✔ purrr   0.3.5 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(nycflights13)"
+  },
+  {
+    "objectID": "assignment2.html#inspect-the-data",
+    "href": "assignment2.html#inspect-the-data",
+    "title": "2  Sabri Demirdal Assignment 2",
+    "section": "4.1 Inspect the data",
+    "text": "4.1 Inspect the data\n\ndf_planes <- planes\nhead(df_planes,10)\n\n# A tibble: 10 × 9\n   tailnum  year type                   manuf…¹ model engines seats speed engine\n   <chr>   <int> <chr>                  <chr>   <chr>   <int> <int> <int> <chr> \n 1 N10156   2004 Fixed wing multi engi… EMBRAER EMB-…       2    55    NA Turbo…\n 2 N102UW   1998 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 3 N103US   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 4 N104UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 5 N10575   2002 Fixed wing multi engi… EMBRAER EMB-…       2    55    NA Turbo…\n 6 N105UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 7 N107US   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 8 N108UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 9 N109UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n10 N110UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n# … with abbreviated variable name ¹​manufacturer\n\n\n\ndf_planes %>%  glimpse()\n\nRows: 3,322\nColumns: 9\n$ tailnum      <chr> \"N10156\", \"N102UW\", \"N103US\", \"N104UW\", \"N10575\", \"N105UW…\n$ year         <int> 2004, 1998, 1999, 1999, 2002, 1999, 1999, 1999, 1999, 199…\n$ type         <chr> \"Fixed wing multi engine\", \"Fixed wing multi engine\", \"Fi…\n$ manufacturer <chr> \"EMBRAER\", \"AIRBUS INDUSTRIE\", \"AIRBUS INDUSTRIE\", \"AIRBU…\n$ model        <chr> \"EMB-145XR\", \"A320-214\", \"A320-214\", \"A320-214\", \"EMB-145…\n$ engines      <int> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, …\n$ seats        <int> 55, 182, 182, 182, 55, 182, 182, 182, 182, 182, 55, 55, 5…\n$ speed        <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…\n$ engine       <chr> \"Turbo-fan\", \"Turbo-fan\", \"Turbo-fan\", \"Turbo-fan\", \"Turb…"
+  },
+  {
+    "objectID": "assignment2.html#rank-total-number-of-planes-produced-by-the-manufacturers-according-to-their-type-after-the-2000.",
+    "href": "assignment2.html#rank-total-number-of-planes-produced-by-the-manufacturers-according-to-their-type-after-the-2000.",
+    "title": "2  Sabri Demirdal Assignment 2",
+    "section": "4.2 Rank Total number of planes produced by the manufacturers according to their type after the 2000.",
+    "text": "4.2 Rank Total number of planes produced by the manufacturers according to their type after the 2000.\n\ndf_planes %>% filter(year >= 2000) %>% group_by(manufacturer) %>% count(type) %>% arrange(desc(n)) %>% \n  mutate(number_of_planes=n)\n\n# A tibble: 10 × 4\n# Groups:   manufacturer [10]\n   manufacturer           type                         n number_of_planes\n   <chr>                  <chr>                    <int>            <int>\n 1 BOEING                 Fixed wing multi engine    896              896\n 2 BOMBARDIER INC         Fixed wing multi engine    356              356\n 3 AIRBUS                 Fixed wing multi engine    328              328\n 4 EMBRAER                Fixed wing multi engine    260              260\n 5 AIRBUS INDUSTRIE       Fixed wing multi engine    180              180\n 6 AGUSTA SPA             Rotorcraft                   1                1\n 7 AVIAT AIRCRAFT INC     Fixed wing single engine     1                1\n 8 CIRRUS DESIGN CORP     Fixed wing single engine     1                1\n 9 FRIEDEMANN JON         Fixed wing single engine     1                1\n10 ROBINSON HELICOPTER CO Rotorcraft                   1                1"
+  },
+  {
+    "objectID": "assignment2.html#find-the-years-that-the-total-number-of-seats-in-the-planes-produced-by-airbus-is-more-than-boeing",
+    "href": "assignment2.html#find-the-years-that-the-total-number-of-seats-in-the-planes-produced-by-airbus-is-more-than-boeing",
+    "title": "2  Sabri Demirdal Assignment 2",
+    "section": "4.3 Find the years that the total number of seats in the planes produced by AIRBUS is more than BOEING",
+    "text": "4.3 Find the years that the total number of seats in the planes produced by AIRBUS is more than BOEING\n\nAIRBUS_seat_number<-df_planes %>% filter(manufacturer==\"AIRBUS\") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))\nBOEING_seat_number<-df_planes %>% filter(manufacturer==\"BOEING\") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))\nAIRBUS_seat_number$year[AIRBUS_seat_number$total_number_of_seats>BOEING_seat_number$total_number_of_seats]\n\nWarning in AIRBUS_seat_number$total_number_of_seats >\nBOEING_seat_number$total_number_of_seats: uzun olan nesne uzunluğu kısa olan\nnesne uzunluğunun bir katı değil\n\n\n [1] 2002 2003 2004 2005 2006 2008 2012 2013   NA   NA   NA   NA   NA   NA"
   }
 ]

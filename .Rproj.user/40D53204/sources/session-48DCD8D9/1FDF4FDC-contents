@@ -1,0 +1,36 @@
+---
+title: " Sabri Demirdal Assignment 2"
+author: "Sabri Demirdal"
+date: "`r Sys.Date()`"
+---
+
+# Install packages
+```{r}
+library(tidyverse)
+library(nycflights13)
+```
+
+# Exploratory data analysis with dplyr
+
+## Inspect the data
+```{r}
+df_planes <- planes
+head(df_planes,10)
+```
+```{r}
+df_planes %>%  glimpse()
+```
+## Rank Total number of planes produced by the manufacturers according to their type after the 2000.
+```{r}
+df_planes %>% filter(year >= 2000) %>% group_by(manufacturer) %>% count(type) %>% arrange(desc(n)) %>% 
+  mutate(number_of_planes=n)
+```
+## Find the years that the total number of seats in the planes produced by AIRBUS is more than BOEING
+
+```{r}
+AIRBUS_seat_number<-df_planes %>% filter(manufacturer=="AIRBUS") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))
+BOEING_seat_number<-df_planes %>% filter(manufacturer=="BOEING") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))
+AIRBUS_seat_number$year[AIRBUS_seat_number$total_number_of_seats>BOEING_seat_number$total_number_of_seats]
+```
+
+

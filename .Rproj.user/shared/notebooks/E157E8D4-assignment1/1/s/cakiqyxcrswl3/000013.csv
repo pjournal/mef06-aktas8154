@@ -1,3 +1,0 @@
-"0","library(""ggplot2"")"
-"0","ggplot(ChickWeight, aes(x = Time, y = weight)) +"
-"0","geom_point(aes(color = Diet))"

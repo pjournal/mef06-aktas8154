@@ -1,0 +1,2 @@
+"0","df_planes %>% filter(year >= 2000) %>% group_by(manufacturer) %>% count(type) %>% arrange(desc(n)) %>% "
+"0","  mutate(number_of_planes=n)"
