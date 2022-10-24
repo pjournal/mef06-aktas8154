@@ -1,5 +1,5 @@
 ---
-title: " Sabri Demirdal Assignment 1"
+title: "  Assignment 1"
 author: "Sabri Demirdal"
 date: "`r Sys.Date()`"
 ---
@@ -8,7 +8,7 @@ date: "`r Sys.Date()`"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# ABOUT MYSELF
+## ABOUT MYSELF
 
 Firstly, I'm Sabri and I graduated from Bogazici university department of economics in 2020. After the graduation, I started to work in the investment office of the Presidency of Republic of Turkey and I have been working here for almost two years as an Analyst.Even if I am dealing with some data process like FDI report and some sector analysis in Turkey in my job, I want to go deeper into data science and work in the more sophisticated and technical job that related to in that area.Therefore I started to Big Data Analytics master program at MEF university.In this sense, despite the fact that until the university I had no idea and any information about this area but some courses that I took in the university and some online bootcamps in the coursera and udemy like platforms bring my knowledge to some level, so with this master program I hope to achive enough proficiency to start a good job in this field.
 
@@ -16,9 +16,9 @@ You access my Linkedin account by clicking [here](https://www.linkedin.com/in/sa
 
 and my **E-mail** [sdemirdal\@invest.gov.tr](mailto:sdemirdal@invest.gov.tr)
 
-# MY FAVORITE UseR-2022 VİDEO
+## MY FAVORITE UseR-2022 VİDEO
 
-## Wenxi Zhang - k-means clustering usage in datasets with missing values
+### Wenxi Zhang - k-means clustering usage in datasets with missing values
 
 This content from Wenzi Zhang who graduated from Columbia University. She aim to utilize a modified K-means algorithm to handle data with missing values.
 
@@ -30,9 +30,9 @@ However, the standard K-means algorithm fails to accomodate data with missing va
 
 ![Visualize the influence of the number of missing values for each observation by drawing density plots of the distance between the centroid and each observation. All distances are categorized by the number of NAs in each observation.](housevotes_density.png)\
 
-# 3 R POSTS RELEVANT MY İNTEREST
+## 3 R POSTS RELEVANT MY İNTEREST
 
-## Downloading Data Using Quantmod Package in R
+### Downloading Data Using Quantmod Package in R
 
 Quantmod provides a very powerful function for downloading financial data from the web. This function is called getSymbols. The getSymbols() method sends a request to download and manage data from public sources or local data. It is necessary to pass some parameters within this method to make the desired request. The first argument of this function is a character vector specifying the names of the symbols to be downloaded. Then you can specify the source from which you want to get the data.
 
@@ -55,7 +55,7 @@ To see the starting point of the data, type the following command. It fetches an
 
 [Here](https://financetrain.com/downloading-data-using-quantmod-package-in-r) is the full post.
 
-## The Power of mutate( ) for Data Wrangling in R
+### The Power of mutate( ) for Data Wrangling in R
 
 mutate() is a dplyr function that adds new variables and preserves existing ones. That's what the documentation says. So when you want to add new variables or change one already in the dataset, that's your good ally. Given our dataset df , we can easily add columns with calculations.
 
@@ -77,7 +77,7 @@ mutate(df, mean_col1 = mean(col1),
 
 [Here](https://towardsdatascience.com/the-power-of-mutate-for-data-wrangling-in-r-172dd2b0be73) is the link of post.
 
-## A simple introduction to ggplot2 (for plotting your data!)
+### A simple introduction to ggplot2 (for plotting your data!)
 
 Data visualization is a powerful tool for scientists and their audiences to easily grasp relationships and trends in data. Some of you may already know how to generate plots using base R. In this blog post, we're going to introduce a package called "ggplot2" that makes it more intuitive to create consistently nice-looking figures in R.The "gg" part of "ggplot2" stands for the grammar of graphics. Just like sentences are composed of various parts of speech (e.g., nouns, verbs, adjectives) that are arranged using a grammatical structure, ggplot2 allows us to create figures using a standardized syntax.
 
