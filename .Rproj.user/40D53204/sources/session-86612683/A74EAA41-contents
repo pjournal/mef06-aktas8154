@@ -1,0 +1,60 @@
+df<- read.csv(file.choose())
+library(ggplot2)
+
+ggplot(data = df,aes(x=carat,y=price,colour=clarity)) +
+  geom_point()
+
+
+N<-100000
+counter<-0
+for(i in rnorm(N)){ 
+  if(i < 1 & i> -1){
+    counter<-counter+1
+  }
+  
+}
+
+print(counter/N)
+
+stats <-read.csv(file.choose())
+stats
+getwd()
+
+nrow(stats)
+str(stats)
+summary(stats)
+stats[3,"Birth.rate"]
+stats$Income.Group<-as.factor(stats$Income.Group)
+levels(stats$Income.Group)
+stats$Income.Group<-factor(stats$Income.Group,levels = 
+                             c("High income","Upper middle income","Lower middle income","Low income" ),
+                               ordered = TRUE)
+library(ggplot2)
+qplot(data=stats,x=Income.Group)
+is.data.frame(stats[stats$Income.Group=="High income",]$Country.Name)
+qplot(data = stats,y=Birth.rate,x=Internet.users,colour=Income.Group,size=I(5))
+
+
+mydf<-data.frame(Country=Countries_2012_Dataset,Code=Codes_2012_Dataset,Region=Regions_2012_Dataset)
+
+head(mydf,30)
+
+merged<- merge(stats,mydf,by.x = "Country.Code",by.y = "Code" )
+
+head(merged)
+merged$Country<-NULL
+
+
+qplot(data = merged,y=Birth.rate,x=Internet.users,colour=Region,size=I(1))
+
+
+
+df<-read.csv(file.choose())
+head(df)
+df_1960<-df[df$Year==1960,]
+df_2013<-df[df$Year==2013,]
+
+Regions=read_excel("Agriculture_data/")
+
+install.packages('rsconnect')
+

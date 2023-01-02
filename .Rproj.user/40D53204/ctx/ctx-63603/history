@@ -1,0 +1,265 @@
+knitr::opts_chunk$set(echo = TRUE)
+install.packages('quantmod')
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+install.packages('quantmod')
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+install.packages("quantmod")
+head(USDEUR,15)
+install.packages('quantmod')
+install.packages("quantmod")
+knitr::opts_chunk$set(echo = TRUE)
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+df <- data.frame(col1=c(1,2,3,4,5,7,6,8,9,7),
+col2=c(2,3,4,5,6,5,5,4,6,3),
+col3=c(5,7,8,9,9,3,5,3,8,9),
+col4=c(43,54,6,3,8,5,6,4,4,3))
+df
+# Add mean, std and median of columns
+mutate(df, mean_col1 = mean(col1),
+std_col2 = sd(col2),
+median_col3 = median(col3))
+install.packages("dplyr")
+# Add mean, std and median of columns
+mutate(df, mean_col1 = mean(col1),
+std_col2 = sd(col2),
+median_col3 = median(col3))
+library("dplyr")
+# Add mean, std and median of columns
+mutate(df, mean_col1 = mean(col1),
+std_col2 = sd(col2),
+median_col3 = median(col3))
+library("dplyr")
+# Add mean, std and median of columns
+mutate(df, mean_col1 = mean(col1),
+std_col2 = sd(col2),
+median_col3 = median(col3))
+knitr::opts_chunk$set(echo = TRUE)
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+library('quantmod')
+getSymbols(Symbols = 'USD/EUR', src = 'oanda')
+data(ChickWeight)
+head(ChickWeight)
+ggplot(ChickWeight, aes(x = Time, y = weight)) +
+geom_point(aes(color = Diet))
+install.packages("ggplot2")
+library("ggplot")
+library("ggplot2")
+ggplot(ChickWeight, aes(x = Time, y = weight)) +
+geom_point(aes(color = Diet))
+library(tidyverse)
+library(nycflights13)
+df_planes <- planes
+head(df_planes,10)
+df_planes %>%  glimpse()
+df_planes %>% filter(year >= 2000) %>% group_by(manufacturer) %>% count(type) %>% arrange(desc(n)) %>%
+mutate(number_of_planes=n)
+df_planes %>% filter(year >= 2000) %>% group_by(manufacturer) %>% count(type) %>% arrange(desc(n)) %>%
+mutate(number_of_planes=n)
+AIRBUS_seat_number<-df_planes %>% filter(manufacturer=="AIRBUS") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))
+BOEING_seat_number<-df_planes %>% filter(manufacturer=="BOEING") %>% group_by(year) %>% summarise(total_number_of_seats=sum(seats))
+AIRBUS_seat_number$year[AIRBUS_seat_number$total_number_of_seats>BOEING_seat_number$total_number_of_seats]
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head(10)
+df_planes %>%  glimpse()
+df %>%  glimpse()
+as.integer(df$`Deal Value (USD)`)
+df %>%  glimpse()
+df$Deal Value (USD) <- as.integer(df$Deal Value (USD))
+df$'Deal Value (USD)' <- as.integer(df$'Deal Value (USD)')
+df %>%  glimpse()
+df %>% group_by(`Investment Stage`) %>%
+summarise(Average_Deal_Value=mean(`Deal Value (USD)`))
+df %>% group_by(Investment Stage) %>%
+df %>% group_by("Investment Stage") %>%
+summarise(Average_Deal_Value=mean(Deal Value (USD)))
+df %>% group_by("Investment Stage") %>%
+summarise(Average_Deal_Value=mean("Deal Value (USD)"))
+df %>% group_by("Investment Stage") %>%
+summarise(Average_Deal_Value=mean("Deal Value (USD)"))
+df %>% group_by("Investment Stage") %>%
+summarise(Average_Deal_Value=mean('Deal Value (USD)'))
+df %>% group_by('Investment Stage') %>%
+summarise(Average_Deal_Value=mean('Deal Value (USD)'))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value=mean('Deal Value (USD)'))
+df %>%  glimpse()
+df %>%  glimpse()
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head(10)
+df %>%  glimpse()
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value=mean('Deal Value (USD)'))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)'))
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head(10)
+df %>% head()
+df %>%  glimpse()
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)'))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df %>%  glimpse()
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)', na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df %>%  glimpse()
+df %>% str()
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+sapply(df,mean)
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head()
+df %>%  glimpse()
+df %>% str()
+df$'Deal Value (USD)' <- as.numeric(df$'Deal Value (USD)')
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df %>%  glimpse()
+df %>% str()
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head()
+df %>%  glimpse()
+df %>% str()
+transform(df,'Deal Value (USD)'=as.numeric('Deal Value (USD)'))
+transform(df,'Deal Value (USD)'=as.numeric('Deal Value (USD)'))
+df %>%  glimpse()
+df %>% str()
+df %>%  glimpse()
+df %>% str()
+transform(df,'Deal Value (USD)'=as.numeric('Deal Value (USD)'))
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head()
+df %>%  glimpse()
+df %>% str()
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`,na.rm=TRUE)
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head()
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`)
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = sum('Deal Value (USD)',na.rm = TRUE))
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+df %>% head()
+df %>%  glimpse()
+df %>% str()
+df %>%  glimpse()
+df %>% str()
+df$`Deal Value (USD)` <- as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)` <- as.numeric(df$`Deal Value (USD)`)
+df$`Deal Value (USD)` <- as.numeric(df$`Deal Value (USD)`)
+df%>%group_by('Investment Stage') %>%
+summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+df %>%  glimpse()
+df %>% str()
+sum(df$`Deal Value (USD)`)
+class(df$`Deal Value (USD)`)
+apr_data <- read.csv("uber-raw-data-apr14.csv")
+library(ggplot2)
+library(ggthemes)
+library(lubridate)
+library(dplyr)
+library(tidyr)
+library(DT)
+library(scales)
+install.packages("ggthemes")
+install.packages("DT")
+install.packages("scales")

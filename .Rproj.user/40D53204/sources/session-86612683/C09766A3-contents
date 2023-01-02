@@ -1,0 +1,18 @@
+---
+  title: "Shinyapp"
+author: "Sabri Demirdal"
+date: "`r Sys.Date()`"
+---
+
+ In this assignment, a shinny web application is developed with the [Foreign Srudents by Nationality Data](https://github.com/berkorbay/datasets/raw/master/foreign_students/foreign_students_by_nationality_2021_2022.xlsx).
+
+With this application, universities of Turkey can be selected by province and their type and after that name of university can be selected, after the all selections,
+number of foreign students shown as a datatable format.
+
+### [Click Here for the Shinny Web Application](https://rx0weh-sabri-demirdal.shinyapps.io/Foreign_Students_by_Nationality_2021/)
+
+
+### Here is the Command Line for the Shinny Web Application:
+```{r eval=FALSE}
+shiny::runGitHub("pjournal/mef06-aktas8154",subdir="/shinny/app.R")
+```
