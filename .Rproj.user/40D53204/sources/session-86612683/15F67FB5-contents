@@ -1,0 +1,34 @@
+---
+title: "  Assignment 3"
+author: "Sabri Demirdal"
+date: "`r Sys.Date()`"
+---
+
+## Install packages and dataset
+```{r}
+library(tidyverse)
+df <- readxl::read_excel("startup_deals_2021.xlsx")
+```
+
+## Exploratory data analysis with dplyr
+
+### Inspect the data
+```{r}
+df %>% head()
+```
+```{r}
+df %>%  glimpse()
+df %>% str()
+```
+### Converting type of 'Deal Value (USD)' to integer 
+```{r}
+
+
+```
+### Avarage Deal Value according to Investment Stages
+```{r}
+df%>%group_by('Investment Stage') %>% 
+  summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))
+```
+
+

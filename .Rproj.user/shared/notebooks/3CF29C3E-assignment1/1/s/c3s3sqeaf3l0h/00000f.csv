@@ -1,0 +1,24 @@
+"0","library(""dplyr"")"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:xts’:
+
+    first, last
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","# Add mean, std and median of columns"
+"0","mutate(df, mean_col1 = mean(col1),"
+"0","       std_col2 = sd(col2), "
+"0","       median_col3 = median(col3))"
