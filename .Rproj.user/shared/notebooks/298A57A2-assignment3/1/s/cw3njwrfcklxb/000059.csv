@@ -1,3 +1,0 @@
-"0","df%>%group_by('Investment Stage') %>% "
-"0","  summarise(Average_Deal_Value = mean('Deal Value (USD)',na.rm = TRUE))"
-"2","Warning: argument is not numeric or logical: returning NA"

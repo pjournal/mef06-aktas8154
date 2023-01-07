@@ -1,0 +1,11 @@
+---
+title: "  OR Case Study"
+author: "Sabri Demirdal"
+date: "`r Sys.Date()`"
+---
+
+### Arauco Supply Chain Plannig Optimization
+
+Wood producer ARAUCO want to make sure their business is running smoothly and that customers get what they need. To do this, ARAUCO asked the company Aleph5 for help. Aleph5 worked really hard setting up a decision support system with tools to help them manage their supply of raw materials (like wood) as well as production and distribution operations so they can reach their goals while keeping costs down and customer satisfaction high. They needed a tool that could keep track of all things related including prices, volume, quality, capacities and more - which was no easy task at first. The Gurobi Optimizer helped by providing mathematical optimization algorithms used to solve complex problems in order for ARAUCO planners create optimal plans based on data collected from different sources every day. This way everyone wins- customers are happy because they got what they wanted plus it saved money too.Aleph5 helped ARAUCO figure out the best way to plan their supply chain quickly and easily.
+
+You can access full case study [here](https://www.gurobi.com/case_studies/arauco-supply-chain-planning-optimization/) Download [link](https://www.gurobi.com/wp-content/uploads/2022/08/CaseStudy-2020Apr-AraucoAleph5_Eng.pdf?x58432)

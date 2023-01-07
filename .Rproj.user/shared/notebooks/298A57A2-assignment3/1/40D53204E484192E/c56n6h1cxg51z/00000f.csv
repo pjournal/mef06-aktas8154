@@ -1,2 +1,0 @@
-"0","df$`Deal Value (USD)`=as.numeric(df$`Deal Value (USD)`,na.rm=TRUE)"
-"0",""

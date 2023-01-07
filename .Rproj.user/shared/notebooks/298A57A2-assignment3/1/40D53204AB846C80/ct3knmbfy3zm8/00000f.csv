@@ -1,2 +1,0 @@
-"0","df %>% group_by(`Investment Stage`) %>% "
-"0","  summarise(Total_number=n())"

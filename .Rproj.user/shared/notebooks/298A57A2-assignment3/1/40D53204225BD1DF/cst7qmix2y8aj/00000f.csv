@@ -1,6 +1,0 @@
-"0","df$`Deal Value (USD)`<- as.numeric(df$`Deal Value (USD)`)"
-"2","Warning: NAs introduced by coercion"
-"0","df[c('Stake%', '%')] <- str_split_fixed(df$`Stake (%)`, '%', 2)"
-"0","df<-df[, !(colnames(df) %in% c(""Stake"",""Stake (%)"",""%""))]"
-"0","df$`Stake%`<- as.numeric(df$`Stake%`)"
-"2","Warning: NAs introduced by coercion"

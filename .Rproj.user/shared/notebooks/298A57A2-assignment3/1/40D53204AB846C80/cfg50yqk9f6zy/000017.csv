@@ -1,3 +1,0 @@
-"0","df %>% group_by(`Investment Stage`,Sector) %>% "
-"0","  summarise(Count=n())  %>% slice(which.max(Count))"
-"2","`summarise()` has grouped output by 'Investment Stage'. You can override using the `.groups` argument."

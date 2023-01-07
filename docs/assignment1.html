@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -194,6 +194,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./Shinnyapp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Shinnyapp</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./OR Case Study.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">OR Case Study</span></a>
+  </div>
+</li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -229,13 +234,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
-<p>title: ” Assignment 1” author: “Sabri Demirdal” date: “2023-01-02” —</p>
+<p>title: ” Assignment 1” author: “Sabri Demirdal” date: “2023-01-08” —</p>
 <p>This is a template example qmd output page. You may see an example R code below.</p>
 <p>Firstly, I’m Sabri and I graduated from Bogazici university department of economics in 2020. After the graduation, I started to work in the investment office of the Presidency of Republic of Turkey and I have been working here for almost two years as an Analyst.Even if I am dealing with some data process like FDI report and some sector analysis in Turkey in my job, I want to go deeper into data science and work in the more sophisticated and technical job that related to in that area.Therefore I started to Big Data Analytics master program at MEF university.In this sense, despite the fact that until the university I had no idea and any information about this area but some courses that I took in the university and some online bootcamps in the coursera and udemy like platforms bring my knowledge to some level, so with this master program I hope to achive enough proficiency to start a good job in this field.</p>
 <p>You access my Linkedin account by clicking <a href="https://www.linkedin.com/in/sabri-demirdal-0508a1169/">here</a>,</p>
@@ -299,12 +305,6 @@ Attaching package: 'zoo'</code></pre>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(USDEUR,<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            USD.EUR
-2022-07-07 0.982164
-2022-07-08 0.984228
-2022-07-09 0.981802
-2022-07-10 0.981912
-2022-07-11 0.990361
-2022-07-12 0.996664
 2022-07-13 0.995145
 2022-07-14 0.998234
 2022-07-15 0.994514
@@ -313,7 +313,13 @@ Attaching package: 'zoo'</code></pre>
 2022-07-18 0.986617
 2022-07-19 0.979669
 2022-07-20 0.979136
-2022-07-21 0.980104</code></pre>
+2022-07-21 0.980104
+2022-07-22 0.980694
+2022-07-23 0.978943
+2022-07-24 0.978984
+2022-07-25 0.978722
+2022-07-26 0.983430
+2022-07-27 0.984930</code></pre>
 </div>
 </div>
 <p>To see the starting point of the data, type the following command. It fetches and displays the first 15 rows of the data.</p>
@@ -456,7 +462,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -492,24 +515,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

@@ -1,2 +1,0 @@
-"0","transform(df,'Deal Value (USD)'=as.numeric('Deal Value (USD)'))"
-"2","Warning: NAs introduced by coercion"
